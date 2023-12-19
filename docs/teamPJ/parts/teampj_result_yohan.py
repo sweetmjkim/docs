@@ -27,7 +27,7 @@ class Quest_result:
     def cal_result(self):
         get_answer_list=self.AI_collection.find({}) #이름id, 문제id, 입력값 가져오기
         for i in range(len(get_answer_list)):
-            self.struct_correct_list.append(get_answer_list[i][명준님 정답 필드이름])
+            self.struct_answer_list.append(get_answer_list[i][명준님 정답 필드이름]) #입력만 들어있는 리스트 저장
             pass
 
 
