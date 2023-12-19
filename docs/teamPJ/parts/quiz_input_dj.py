@@ -5,8 +5,8 @@ def Connect():
     return database 
 
 database = Connect() # Connect를 호출하여 MongoDB 내 Database까지 연결을 하고 이를 database라는 변수로 선언한다.
-Quiz_insert = database["Quiz_insert"] # Mongo DB 내 'local 데이터베이스'에서 "todos_list" 이라는 collection에 연결
-Quiz_answer = database["Quiz_answer"]# Mongo DB 내 'local 데이터베이스'에서 "participants" 이라는 collection에 연결
+Quiz_insert = database["Quiz_insert"] # Mongo DB 내 'local 데이터베이스'에서 "Quiz_insert" 이라는 collection에 연결
+Quiz_answer = database["Quiz_answer"]# Mongo DB 내 'local 데이터베이스'에서 "Quiz_answer" 이라는 collection에 연결
 
 def input_questions():    
     num_answers= int(input("출제하실 문제 유형을 입력하세요. : ")) # 보기가 몇개인지를 입력받는 변수를 num_answers라고 지정
