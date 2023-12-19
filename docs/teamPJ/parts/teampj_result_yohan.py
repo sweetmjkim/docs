@@ -6,6 +6,7 @@ class Quest_result:
     def __init__(self) -> None:
         self.struct_answer_list=[]
         self.struct_correct_list=[]
+        self.struct_score_list=[]
         pass
 
     def connect_mongo(self,address,DB,collection1,collection2,collection3,collection4):
@@ -21,8 +22,10 @@ class Quest_result:
         get_correct_list=list(self.QA_collection.find({})) #점수랑 정답 가져오기
         for i in range(len(get_correct_list)):
             self.struct_correct_list.append(get_correct_list[i][덕재님 입력값 필드이름]) #정답만 들어있는 리스트 저장
+            self.struct_score_list.append(get_correct_list[i][덕재님 점수값 필드이름])  #점수만 들어있는 리스트 저장
         print("각 문항 정답 : {}".format(self.struct_correct_list[덕재님 입력값 필드이름]))
         pass
+        return
 
     def cal_result(self):
         get_answer_list=self.AI_collection.find({}) #이름id, 문제id, 입력값 가져오기
