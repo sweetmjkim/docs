@@ -18,19 +18,18 @@ class Quest_result:
         return
 
     def get_answer(self):
-        get_answer_list=list(self.QA_collection.find({}))
-        for i in range(len(get_answer_list)):
-            self.struct_answer_list.append(get_answer_list[i][덕재님 입력값 필드이름])
-        print("각 문항 정답 : {}".format(self.struct_answer_list[덕재님 입력값 필드이름]))
+        get_correct_list=list(self.QA_collection.find({})) #점수랑 정답 가져오기
+        for i in range(len(get_correct_list)):
+            self.struct_correct_list.append(get_correct_list[i][덕재님 입력값 필드이름]) #정답만 들어있는 리스트 저장
+        print("각 문항 정답 : {}".format(self.struct_correct_list[덕재님 입력값 필드이름]))
         pass
 
     def cal_result(self):
-        get_correct_list=self.AI_collection.find({})
-        for i in range(len(get_correct_list)):
-            self.struct_correct_list.append(get_correct_list[i][덕재님 정답 필드이름])
+        get_answer_list=self.AI_collection.find({}) #이름id, 문제id, 입력값 가져오기
+        for i in range(len(get_answer_list)):
+            self.struct_correct_list.append(get_answer_list[i][명준님 정답 필드이름])
             pass
 
-        채점결과 계산해서 넣어야댐
 
     def run_result(self):
         print("응시자별 채점 결과")
