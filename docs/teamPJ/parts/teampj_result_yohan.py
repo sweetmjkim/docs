@@ -85,7 +85,11 @@ class Quest_result:
             pass
         print("과목 평균 점수 : {}".format(result_score/numcount))
         return
+    
 
+if __name__ == "__main__":
+    runProgram=Quest_result('mongodb://localhost:27017',"local",'Quiz_insert','Quiz_answer','Name_input','Answer_input')
+    runProgram.cal_data()
 
 # mongodb://192.168.0.92:27017 최종 주소
 runProgram=Quest_result('mongodb://192.168.0.92:27017',"local",'Quiz_insert','Quiz_answer','Name_input','Answer_input')
