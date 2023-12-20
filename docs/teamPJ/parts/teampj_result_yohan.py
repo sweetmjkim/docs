@@ -84,7 +84,7 @@ class Quest_result:
             result_score += score   # 총 점수는 한번 돌때마다 스코어의 합산
             pass
         if numcount==0:
-            numcount += 1
+            numcount = 1
             print("과목 평균 점수 : {}".format(result_score/numcount))
             pass
         else:
@@ -96,3 +96,6 @@ class Quest_result:
 if __name__ == "__main__":
     runProgram=Quest_result('mongodb://localhost:27017',"local",'Quiz_insert','Quiz_answer','Name_input','Answer_input')
     runProgram.cal_data()
+
+runProgram=Quest_result('mongodb://192.168.0.92:27017',"local",'Quiz_insert','Quiz_answer','Name_input','Answer_input')
+runProgram.cal_data()   #시험 결과 출력
