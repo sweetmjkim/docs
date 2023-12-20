@@ -26,4 +26,4 @@ def input_questions():
         Quiz_answer.update_one({'_id': questions_id }, { "$set" : { "정답" : correct_answer } } ,upsert=True ) # 입력받은 correct_answer를 Quiz_answers collection에 동일한 위치 선상에 저장하도록 한다.
     return
 
-input_questions()
+
