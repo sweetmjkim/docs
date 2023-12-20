@@ -83,11 +83,13 @@ class Quest_result:
             numcount += 1   # 한번 돌때마다 사람수 카운트
             result_score += score   # 총 점수는 한번 돌때마다 스코어의 합산
             pass
-        try:
-            print("과목 평균 점수 : {}".format(result_score/numcount))
-            pass
-        except:
-            print("프로그램이 로딩중입니다.")
+            if numcount==0:
+                numcount += 1
+                print("과목 평균 점수 : {}".format(result_score/numcount))
+                pass
+            else:
+                print("과목 평균 점수 : {}".format(result_score/numcount))
+                pass
         return
     
 
