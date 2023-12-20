@@ -1,7 +1,8 @@
 import parts.quiz_input_dj
 parts.quiz_input_dj.input_questions()
 
-
+import parts.Name_myungjun
+parts.Name_myungjun.quiz_program()
 
 from parts.teampj_result_yohan import Quest_result
 
