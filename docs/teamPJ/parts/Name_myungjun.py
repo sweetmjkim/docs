@@ -1,7 +1,7 @@
 from pymongo import MongoClient     # 
 
 def Connect_Mongo():
-    mongoClient = MongoClient("mongodb://192.168.0.92:27017")       # mongodb 연결
+    mongoClient = MongoClient("mongodb://192.168.10.236:27017")       # mongodb 연결
     database = mongoClient["local"]                                 # mongodb의 'local' 데이터베이스
     return database
 

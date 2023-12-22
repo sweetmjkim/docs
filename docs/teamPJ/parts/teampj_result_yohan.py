@@ -97,5 +97,5 @@ if __name__ == "__main__":
     runProgram=Quest_result('mongodb://localhost:27017',"local",'Quiz_insert','Quiz_answer','Name_input','Answer_input')
     runProgram.cal_data()
 
-runProgram=Quest_result('mongodb://192.168.0.92:27017',"local",'Quiz_insert','Quiz_answer','Name_input','Answer_input')
+runProgram=Quest_result('mongodb://192.168.10.236:27017',"local",'Quiz_insert','Quiz_answer','Name_input','Answer_input')
 runProgram.cal_data()   #시험 결과 출력
