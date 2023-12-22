@@ -21,6 +21,7 @@
 |입력자 답 collection|'Answer_input' (이름id,문제id,입력)|
 |github|https://github.com/sweetmjkim/docs|
 |DB|mongodb://192.168.0.92:27017|
+|영상주소|https://youtu.be/eXpaFQo0CUg|
 
 <details>
 
